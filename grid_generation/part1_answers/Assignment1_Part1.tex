@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{graphicx}  % For including images
+\usepackage{amsmath}   % For math formatting
+\usepackage{float}     % For image positioning
+
+\begin{document}
+
+\title{Understanding A* and Heuristic Search}
+\author{Maharsh Desai, Rohan Dash, Rick Hsu}
+\date{\today}
+\maketitle
+
+\section{Part 1: Understanding the Methods}
+
+\subsection{(a) Why does the agent move east first?}
+
+\textbf{Question:} Explain in your report why the first move of the agent for the example search problem from Figure 8 is to the east rather than the north, given that the agent does not initially know which cells are blocked.
+
+
+\textbf{Answer:}  
+There are three possible directions that the agent can move: North, East, and West. Since the agent does not initially know which cells are blocked, it assumes all unknown cells are unblocked and selects the move that minimizes its estimated cost to the goal. The Manhattan distances to the goal for each possible move are calculated as follows:
+
+\begin{align*}
+\text{Start:} & \quad (E,2) \rightarrow (5,2) \\
+\text{Goal:} & \quad (E,5) \rightarrow (5,5) \\
+\text{Manhattan Distance Formula:} & \quad h(s) = |x_s - x_t| + |y_s - y_t|
+\end{align*}
+
+\begin{align*}
+\text{Current:} & \quad |2 - 5| + |5 - 5| = 3 \\
+\text{North:} & \quad |2 - 5| + |4 - 5| = 4 \\
+\text{East:} & \quad |3 - 5| + |5 - 5| = 2 \\
+\text{West:} & \quad |1 - 5| + |5 - 5| = 4
+\end{align*}
+
+Since East has the lowest \( h(s) \) value, it is chosen as the next position to move to rather than any other possible direction. A* selects moves based on the smallest estimated total cost \( f(s) = g(s) + h(s) \), making east the optimal choice.
+
+\subsection{(b) Proof that the agent terminates in finite time}
+
+\textbf{Question:} This project argues that the agent is guaranteed to reach the target if it is not separated from it by blocked cells. Give a convincing argument that the agent in finite gridworlds indeed either reaches the target or discovers that this is impossible in finite time. Prove that the number of moves of the agent until it reaches the target or discovers that this is impossible is bounded from above by the number of unblocked cells squared.
+
+
+\textbf{Answer:}  
+In a finite gridworld, the agent is guaranteed to either reach the target or determine that no path exists within a finite number of moves. This follows from the completeness of A*, which systematically explores paths in increasing order of estimated cost until the goal is reached or all possible routes have been examined. Since the environment consists of a bounded \( N \times N \) grid, with at most \( U \) unblocked cells, the agent’s search space is finite. 
+
+In the worst case, the agent may have to recompute its path multiple times due to newly discovered blocked cells. Each A* search explores at most \( U \) cells, and since the agent may need to replan up to \( U \) times, the total number of moves is bounded by \( O(U^2) \). This ensures that the agent terminates in finite time, either by successfully reaching the target or exhausting all available paths, confirming that the goal is unreachable.
+
+\end{document}
