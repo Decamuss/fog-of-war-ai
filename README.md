@@ -4,13 +4,17 @@
 ├── grid_generation/          # Grid world generation code
 │   ├── environment/         
 │   │   ├── grid_world.py    # Core GridWorld class
-│   │   └── maze_generator.py
+│   │   ├── maze_generator.py
+│   │   ├── priority_queue.py
+│   │   └── repeated_a_star.py
 │   └── utils/
+        ├── min_heap.py       # Custom Built Binary Heap Structure
 │       └── visualization.py  # Maze visualization utilities
 ├── mazes/                    # Generated maze files
 │   ├── maze_00.txt          # Text representation
 │   ├── maze_00.png          # Visual representation
 │   └── ...
+├──written_answers
 └── tests/                    # Test files
     └── test_grid_world.py   # Grid world tests
 ```
