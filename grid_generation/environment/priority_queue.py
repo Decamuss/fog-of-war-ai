@@ -1,4 +1,4 @@
-from utils.min_heap import MinHeap  # Import your custom MinHeap
+from grid_generation.utils.min_heap import MinHeap  # Import your custom MinHeap
 
 class PriorityQueue:
     def __init__(self, favor_larger_g=False):

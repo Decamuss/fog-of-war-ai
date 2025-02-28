@@ -2,112 +2,262 @@ Forward vs Backward A* Comparison Results
 ======================================
 
 Average Results:
-Average expanded cells (Forward): 2121.40
-Average expanded cells (Backward): 11544.95
-Ratio (Forward/Backward): 0.18x
-Average path length (Forward): 164.60
-Average path length (Backward): 155.30
-Average runtime (Forward): 0.0259 seconds
-Average runtime (Backward): 0.1366 seconds
+Average expanded cells (Forward): 2592.24
+Average expanded cells (Backward): 15934.54
+Ratio (Forward/Backward): 0.16x
+Average path length (Forward): 160.80
+Average path length (Backward): 165.12
+Average runtime (Forward): 0.0306 seconds
+Average runtime (Backward): 0.2228 seconds
 
 Detailed Results:
 
 Maze 0:
-  Forward: 2652 cells, 0.0234 seconds, path length: 234
-  Backward: 23810 cells, 0.2139 seconds, path length: 330
-  Ratio (Forward/Backward): 0.11x
+  Forward: 2564 cells, 0.0355 seconds, path length: 236
+  Backward: 5750 cells, 0.0657 seconds, path length: 226
+  Ratio (Forward/Backward): 0.45x
 
 Maze 1:
-  Forward: 1635 cells, 0.0787 seconds, path length: 147
-  Backward: 10740 cells, 0.1157 seconds, path length: 265
-  Ratio (Forward/Backward): 0.15x
+  Forward: 1790 cells, 0.0228 seconds, path length: 171
+  Backward: 6330 cells, 0.0797 seconds, path length: 173
+  Ratio (Forward/Backward): 0.28x
 
 Maze 2:
-  Forward: 4900 cells, 0.0567 seconds, path length: 276
-  Backward: 35850 cells, 0.4939 seconds, path length: 280
-  Ratio (Forward/Backward): 0.14x
+  Forward: 3796 cells, 0.0544 seconds, path length: 192
+  Backward: 32008 cells, 0.4557 seconds, path length: 324
+  Ratio (Forward/Backward): 0.12x
 
 Maze 3:
-  Forward: 1084 cells, 0.0076 seconds, path length: 160
-  Backward: 2295 cells, 0.0179 seconds, path length: 86
-  Ratio (Forward/Backward): 0.47x
-
-Maze 4:
-  Forward: 1702 cells, 0.0151 seconds, path length: 182
-  Backward: 8763 cells, 0.1016 seconds, path length: 126
-  Ratio (Forward/Backward): 0.19x
-
-Maze 5:
-  Forward: 1068 cells, 0.0181 seconds, path length: 116
-  Backward: 2534 cells, 0.0290 seconds, path length: 96
-  Ratio (Forward/Backward): 0.42x
-
-Maze 6:
-  Forward: 758 cells, 0.0079 seconds, path length: 90
-  Backward: 1438 cells, 0.0144 seconds, path length: 100
-  Ratio (Forward/Backward): 0.53x
-
-Maze 7:
-  Forward: 622 cells, 0.0068 seconds, path length: 83
-  Backward: 2125 cells, 0.0187 seconds, path length: 105
+  Forward: 1101 cells, 0.0101 seconds, path length: 160
+  Backward: 3860 cells, 0.0373 seconds, path length: 186
   Ratio (Forward/Backward): 0.29x
 
+Maze 4:
+  Forward: 2707 cells, 0.0320 seconds, path length: 266
+  Backward: 9397 cells, 0.1247 seconds, path length: 202
+  Ratio (Forward/Backward): 0.29x
+
+Maze 5:
+  Forward: 1062 cells, 0.0139 seconds, path length: 126
+  Backward: 1718 cells, 0.0218 seconds, path length: 124
+  Ratio (Forward/Backward): 0.62x
+
+Maze 6:
+  Forward: 897 cells, 0.0113 seconds, path length: 98
+  Backward: 9301 cells, 0.1138 seconds, path length: 138
+  Ratio (Forward/Backward): 0.10x
+
+Maze 7:
+  Forward: 702 cells, 0.0092 seconds, path length: 89
+  Backward: 1013 cells, 0.0133 seconds, path length: 89
+  Ratio (Forward/Backward): 0.69x
+
 Maze 8:
-  Forward: 4927 cells, 0.0696 seconds, path length: 320
-  Backward: 21834 cells, 0.3185 seconds, path length: 328
-  Ratio (Forward/Backward): 0.23x
-
-Maze 9:
-  Forward: 257 cells, 0.0018 seconds, path length: 46
-  Backward: 320 cells, 0.0025 seconds, path length: 46
-  Ratio (Forward/Backward): 0.80x
-
-Maze 10:
-  Forward: 4853 cells, 0.0364 seconds, path length: 339
-  Backward: 18954 cells, 0.2411 seconds, path length: 273
-  Ratio (Forward/Backward): 0.26x
-
-Maze 11:
-  Forward: 3434 cells, 0.0295 seconds, path length: 233
-  Backward: 4023 cells, 0.0362 seconds, path length: 101
-  Ratio (Forward/Backward): 0.85x
-
-Maze 12:
-  Forward: 1190 cells, 0.0106 seconds, path length: 121
-  Backward: 3622 cells, 0.0356 seconds, path length: 121
-  Ratio (Forward/Backward): 0.33x
-
-Maze 13:
-  Forward: 285 cells, 0.0019 seconds, path length: 58
-  Backward: 369 cells, 0.0030 seconds, path length: 54
-  Ratio (Forward/Backward): 0.77x
-
-Maze 14:
-  Forward: 1238 cells, 0.0121 seconds, path length: 125
-  Backward: 6321 cells, 0.0640 seconds, path length: 129
-  Ratio (Forward/Backward): 0.20x
-
-Maze 15:
-  Forward: 5304 cells, 0.0685 seconds, path length: 269
-  Backward: 58208 cells, 0.7363 seconds, path length: 267
+  Forward: 9156 cells, 0.1247 seconds, path length: 384
+  Backward: 97834 cells, 1.5035 seconds, path length: 370
   Ratio (Forward/Backward): 0.09x
 
+Maze 9:
+  Forward: 160 cells, 0.0018 seconds, path length: 36
+  Backward: 303 cells, 0.0031 seconds, path length: 36
+  Ratio (Forward/Backward): 0.53x
+
+Maze 10:
+  Forward: 2100 cells, 0.0296 seconds, path length: 185
+  Backward: 8797 cells, 0.1111 seconds, path length: 215
+  Ratio (Forward/Backward): 0.24x
+
+Maze 11:
+  Forward: 2989 cells, 0.0394 seconds, path length: 211
+  Backward: 8859 cells, 0.0938 seconds, path length: 215
+  Ratio (Forward/Backward): 0.34x
+
+Maze 12:
+  Forward: 1045 cells, 0.0140 seconds, path length: 107
+  Backward: 10910 cells, 0.1405 seconds, path length: 141
+  Ratio (Forward/Backward): 0.10x
+
+Maze 13:
+  Forward: 276 cells, 0.0033 seconds, path length: 60
+  Backward: 539 cells, 0.0048 seconds, path length: 66
+  Ratio (Forward/Backward): 0.51x
+
+Maze 14:
+  Forward: 902 cells, 0.0126 seconds, path length: 109
+  Backward: 5528 cells, 0.0666 seconds, path length: 133
+  Ratio (Forward/Backward): 0.16x
+
+Maze 15:
+  Forward: 4916 cells, 0.0637 seconds, path length: 253
+  Backward: 79931 cells, 1.1680 seconds, path length: 305
+  Ratio (Forward/Backward): 0.06x
+
 Maze 16:
-  Forward: 239 cells, 0.0021 seconds, path length: 34
-  Backward: 378 cells, 0.0029 seconds, path length: 34
-  Ratio (Forward/Backward): 0.63x
+  Forward: 346 cells, 0.0034 seconds, path length: 56
+  Backward: 1442 cells, 0.0141 seconds, path length: 70
+  Ratio (Forward/Backward): 0.24x
 
 Maze 17:
-  Forward: 2442 cells, 0.0170 seconds, path length: 206
-  Backward: 4100 cells, 0.0349 seconds, path length: 128
-  Ratio (Forward/Backward): 0.60x
+  Forward: 1188 cells, 0.0153 seconds, path length: 114
+  Backward: 4217 cells, 0.0457 seconds, path length: 122
+  Ratio (Forward/Backward): 0.28x
 
 Maze 18:
-  Forward: 240 cells, 0.0015 seconds, path length: 60
-  Backward: 729 cells, 0.0048 seconds, path length: 48
-  Ratio (Forward/Backward): 0.33x
+  Forward: 288 cells, 0.0036 seconds, path length: 52
+  Backward: 736 cells, 0.0074 seconds, path length: 52
+  Ratio (Forward/Backward): 0.39x
 
 Maze 19:
-  Forward: 3598 cells, 0.0531 seconds, path length: 193
-  Backward: 24486 cells, 0.2472 seconds, path length: 189
-  Ratio (Forward/Backward): 0.15x
+  Forward: 6369 cells, 0.0801 seconds, path length: 301
+  Backward: 24850 cells, 0.4133 seconds, path length: 245
+  Ratio (Forward/Backward): 0.26x
+
+Maze 20:
+  Forward: 4635 cells, 0.0598 seconds, path length: 249
+  Backward: 35715 cells, 0.5119 seconds, path length: 205
+  Ratio (Forward/Backward): 0.13x
+
+Maze 21:
+  Forward: 4045 cells, 0.0630 seconds, path length: 239
+  Backward: 43336 cells, 0.6481 seconds, path length: 237
+  Ratio (Forward/Backward): 0.09x
+
+Maze 22:
+  Forward: 3411 cells, 0.0401 seconds, path length: 270
+  Backward: 12189 cells, 0.1234 seconds, path length: 276
+  Ratio (Forward/Backward): 0.28x
+
+Maze 23:
+  Forward: 1017 cells, 0.0105 seconds, path length: 133
+  Backward: 4569 cells, 0.0409 seconds, path length: 291
+  Ratio (Forward/Backward): 0.22x
+
+Maze 24:
+  Forward: 3270 cells, 0.0429 seconds, path length: 210
+  Backward: 64357 cells, 0.9449 seconds, path length: 302
+  Ratio (Forward/Backward): 0.05x
+
+Maze 25:
+  Forward: 128 cells, 0.0016 seconds, path length: 30
+  Backward: 219 cells, 0.0026 seconds, path length: 30
+  Ratio (Forward/Backward): 0.58x
+
+Maze 26:
+  Forward: 2420 cells, 0.0323 seconds, path length: 190
+  Backward: 14620 cells, 0.1788 seconds, path length: 200
+  Ratio (Forward/Backward): 0.17x
+
+Maze 27:
+  Forward: 1175 cells, 0.0142 seconds, path length: 97
+  Backward: 9803 cells, 0.1218 seconds, path length: 101
+  Ratio (Forward/Backward): 0.12x
+
+Maze 28:
+  Forward: 4441 cells, 0.0583 seconds, path length: 284
+  Backward: 67300 cells, 1.0884 seconds, path length: 258
+  Ratio (Forward/Backward): 0.07x
+
+Maze 29:
+  Forward: 11345 cells, 0.0787 seconds, path length: 127
+  Backward: 3794 cells, 0.0377 seconds, path length: 135
+  Ratio (Forward/Backward): 2.99x
+
+Maze 30:
+  Forward: 905 cells, 0.0093 seconds, path length: 107
+  Backward: 4161 cells, 0.0461 seconds, path length: 105
+  Ratio (Forward/Backward): 0.22x
+
+Maze 31:
+  Forward: 3778 cells, 0.0486 seconds, path length: 249
+  Backward: 32918 cells, 0.4541 seconds, path length: 281
+  Ratio (Forward/Backward): 0.11x
+
+Maze 32:
+  Forward: 354 cells, 0.0037 seconds, path length: 55
+  Backward: 1208 cells, 0.0143 seconds, path length: 55
+  Ratio (Forward/Backward): 0.29x
+
+Maze 33:
+  Forward: 166 cells, 0.0017 seconds, path length: 43
+  Backward: 337 cells, 0.0034 seconds, path length: 41
+  Ratio (Forward/Backward): 0.49x
+
+Maze 34:
+  Forward: 8 cells, 0.0001 seconds, path length: 7
+  Backward: 8 cells, 0.0003 seconds, path length: 7
+  Ratio (Forward/Backward): 1.00x
+
+Maze 35:
+  Forward: 2179 cells, 0.0248 seconds, path length: 210
+  Backward: 12959 cells, 0.1573 seconds, path length: 142
+  Ratio (Forward/Backward): 0.17x
+
+Maze 36:
+  Forward: 2453 cells, 0.0290 seconds, path length: 179
+  Backward: 7600 cells, 0.0776 seconds, path length: 179
+  Ratio (Forward/Backward): 0.32x
+
+Maze 37:
+  Forward: 11976 cells, 0.0913 seconds, path length: 157
+  Backward: 5959 cells, 0.0730 seconds, path length: 157
+  Ratio (Forward/Backward): 2.01x
+
+Maze 38:
+  Forward: 3447 cells, 0.0414 seconds, path length: 178
+  Backward: 5900 cells, 0.0741 seconds, path length: 102
+  Ratio (Forward/Backward): 0.58x
+
+Maze 39:
+  Forward: 1825 cells, 0.0233 seconds, path length: 132
+  Backward: 13147 cells, 0.1801 seconds, path length: 132
+  Ratio (Forward/Backward): 0.14x
+
+Maze 40:
+  Forward: 2046 cells, 0.0219 seconds, path length: 200
+  Backward: 5202 cells, 0.0603 seconds, path length: 96
+  Ratio (Forward/Backward): 0.39x
+
+Maze 41:
+  Forward: 680 cells, 0.0084 seconds, path length: 78
+  Backward: 910 cells, 0.0104 seconds, path length: 78
+  Ratio (Forward/Backward): 0.75x
+
+Maze 42:
+  Forward: 17 cells, 0.0002 seconds, path length: 9
+  Backward: 18 cells, 0.0002 seconds, path length: 9
+  Ratio (Forward/Backward): 0.94x
+
+Maze 43:
+  Forward: 3458 cells, 0.0419 seconds, path length: 214
+  Backward: 28507 cells, 0.3173 seconds, path length: 274
+  Ratio (Forward/Backward): 0.12x
+
+Maze 44:
+  Forward: 404 cells, 0.0037 seconds, path length: 98
+  Backward: 636 cells, 0.0061 seconds, path length: 100
+  Ratio (Forward/Backward): 0.64x
+
+Maze 45:
+  Forward: 3728 cells, 0.0484 seconds, path length: 256
+  Backward: 34800 cells, 0.4695 seconds, path length: 246
+  Ratio (Forward/Backward): 0.11x
+
+Maze 46:
+  Forward: 5452 cells, 0.0725 seconds, path length: 253
+  Backward: 40684 cells, 0.5938 seconds, path length: 255
+  Ratio (Forward/Backward): 0.13x
+
+Maze 47:
+  Forward: 2158 cells, 0.0256 seconds, path length: 176
+  Backward: 5454 cells, 0.0669 seconds, path length: 122
+  Ratio (Forward/Backward): 0.40x
+
+Maze 48:
+  Forward: 2279 cells, 0.0266 seconds, path length: 232
+  Backward: 8037 cells, 0.0883 seconds, path length: 236
+  Ratio (Forward/Backward): 0.28x
+
+Maze 49:
+  Forward: 2058 cells, 0.0236 seconds, path length: 172
+  Backward: 19057 cells, 0.2651 seconds, path length: 172
+  Ratio (Forward/Backward): 0.11x

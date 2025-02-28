@@ -1,0 +1,219 @@
+Comparison of Repeated Forward A* and Adaptive A* on 50 mazes
+=================================================================
+
+Forward A* success rate: 48/50 (96.00%)
+Adaptive A* success rate: 48/50 (96.00%)
+
+Average expanded cells (Forward A*): 7916.52
+Average expanded cells (Adaptive A*): 8042.46
+Reduction in expanded cells: -1.59%
+
+Average path length (Forward A*): 161.58
+Average path length (Adaptive A*): 170.00
+
+Average runtime (Forward A*): 0.100888 seconds
+Average runtime (Adaptive A*): 0.113215 seconds
+Runtime improvement: -12.22%
+
+Detailed Results:
+----------------
+Maze 1:
+  Forward A*: Success, Expanded: 10541, Path: 236, Runtime: 0.171682s
+  Adaptive A*: Success, Expanded: 10293, Path: 236, Runtime: 0.158422s
+
+Maze 2:
+  Forward A*: Success, Expanded: 6830, Path: 171, Runtime: 0.094634s
+  Adaptive A*: Success, Expanded: 6663, Path: 173, Runtime: 0.107250s
+
+Maze 3:
+  Forward A*: Success, Expanded: 12046, Path: 192, Runtime: 0.198377s
+  Adaptive A*: Success, Expanded: 11998, Path: 192, Runtime: 0.213140s
+
+Maze 4:
+  Forward A*: Success, Expanded: 5487, Path: 160, Runtime: 0.054450s
+  Adaptive A*: Success, Expanded: 5104, Path: 186, Runtime: 0.066713s
+
+Maze 5:
+  Forward A*: Success, Expanded: 11741, Path: 266, Runtime: 0.142481s
+  Adaptive A*: Success, Expanded: 9311, Path: 268, Runtime: 0.148484s
+
+Maze 6:
+  Forward A*: Success, Expanded: 4848, Path: 126, Runtime: 0.074235s
+  Adaptive A*: Success, Expanded: 4810, Path: 126, Runtime: 0.084553s
+
+Maze 7:
+  Forward A*: Success, Expanded: 2829, Path: 98, Runtime: 0.038164s
+  Adaptive A*: Success, Expanded: 4915, Path: 142, Runtime: 0.066958s
+
+Maze 8:
+  Forward A*: Success, Expanded: 3122, Path: 89, Runtime: 0.044698s
+  Adaptive A*: Success, Expanded: 3109, Path: 89, Runtime: 0.047603s
+
+Maze 9:
+  Forward A*: Success, Expanded: 28670, Path: 384, Runtime: 0.388071s
+  Adaptive A*: Success, Expanded: 27618, Path: 380, Runtime: 0.394555s
+
+Maze 10:
+  Forward A*: Success, Expanded: 573, Path: 36, Runtime: 0.006986s
+  Adaptive A*: Success, Expanded: 570, Path: 36, Runtime: 0.007664s
+
+Maze 11:
+  Forward A*: Success, Expanded: 8558, Path: 185, Runtime: 0.120268s
+  Adaptive A*: Success, Expanded: 8609, Path: 197, Runtime: 0.146405s
+
+Maze 12:
+  Forward A*: Success, Expanded: 9924, Path: 211, Runtime: 0.137578s
+  Adaptive A*: Success, Expanded: 9765, Path: 215, Runtime: 0.152497s
+
+Maze 13:
+  Forward A*: Success, Expanded: 4352, Path: 107, Runtime: 0.059025s
+  Adaptive A*: Success, Expanded: 4318, Path: 107, Runtime: 0.060464s
+
+Maze 14:
+  Forward A*: Success, Expanded: 843, Path: 60, Runtime: 0.009780s
+  Adaptive A*: Success, Expanded: 832, Path: 60, Runtime: 0.010677s
+
+Maze 15:
+  Forward A*: Success, Expanded: 3459, Path: 109, Runtime: 0.044390s
+  Adaptive A*: Success, Expanded: 3231, Path: 103, Runtime: 0.043256s
+
+Maze 16:
+  Forward A*: Success, Expanded: 17253, Path: 253, Runtime: 0.224032s
+  Adaptive A*: Success, Expanded: 25838, Path: 325, Runtime: 0.335380s
+
+Maze 17:
+  Forward A*: Success, Expanded: 1117, Path: 56, Runtime: 0.011432s
+  Adaptive A*: Success, Expanded: 1595, Path: 70, Runtime: 0.019452s
+
+Maze 18:
+  Forward A*: Success, Expanded: 3893, Path: 114, Runtime: 0.051428s
+  Adaptive A*: Success, Expanded: 3844, Path: 114, Runtime: 0.050798s
+
+Maze 19:
+  Forward A*: Success, Expanded: 855, Path: 52, Runtime: 0.009144s
+  Adaptive A*: Success, Expanded: 844, Path: 52, Runtime: 0.010152s
+
+Maze 20:
+  Forward A*: Success, Expanded: 19114, Path: 301, Runtime: 0.238015s
+  Adaptive A*: Success, Expanded: 18439, Path: 307, Runtime: 0.245991s
+
+Maze 21:
+  Forward A*: Success, Expanded: 14920, Path: 249, Runtime: 0.182040s
+  Adaptive A*: Success, Expanded: 14370, Path: 249, Runtime: 0.199016s
+
+Maze 22:
+  Forward A*: Success, Expanded: 13251, Path: 239, Runtime: 0.163334s
+  Adaptive A*: Success, Expanded: 14176, Path: 227, Runtime: 0.191886s
+
+Maze 23:
+  Forward A*: Success, Expanded: 14962, Path: 270, Runtime: 0.161195s
+  Adaptive A*: Success, Expanded: 11744, Path: 274, Runtime: 0.257154s
+
+Maze 24:
+  Forward A*: Success, Expanded: 3695, Path: 133, Runtime: 0.038427s
+  Adaptive A*: Success, Expanded: 8394, Path: 293, Runtime: 0.095326s
+
+Maze 25:
+  Forward A*: Success, Expanded: 12587, Path: 210, Runtime: 0.164116s
+  Adaptive A*: Success, Expanded: 13623, Path: 206, Runtime: 0.184302s
+
+Maze 26:
+  Forward A*: Success, Expanded: 405, Path: 30, Runtime: 0.004031s
+  Adaptive A*: Success, Expanded: 403, Path: 30, Runtime: 0.004595s
+
+Maze 27:
+  Forward A*: Success, Expanded: 9513, Path: 190, Runtime: 0.115013s
+  Adaptive A*: Success, Expanded: 9394, Path: 202, Runtime: 0.118981s
+
+Maze 28:
+  Forward A*: Success, Expanded: 3808, Path: 97, Runtime: 0.044411s
+  Adaptive A*: Success, Expanded: 3787, Path: 97, Runtime: 0.048730s
+
+Maze 29:
+  Forward A*: Success, Expanded: 17367, Path: 284, Runtime: 0.221921s
+  Adaptive A*: Success, Expanded: 17176, Path: 286, Runtime: 0.235643s
+
+Maze 30:
+  Forward A*: Failure, Expanded: 14463, Path: 127, Runtime: 0.106917s
+  Adaptive A*: Failure, Expanded: 14342, Path: 127, Runtime: 0.109817s
+
+Maze 31:
+  Forward A*: Success, Expanded: 3097, Path: 107, Runtime: 0.034269s
+  Adaptive A*: Success, Expanded: 2771, Path: 105, Runtime: 0.031810s
+
+Maze 32:
+  Forward A*: Success, Expanded: 15558, Path: 249, Runtime: 0.211208s
+  Adaptive A*: Success, Expanded: 14493, Path: 243, Runtime: 0.201557s
+
+Maze 33:
+  Forward A*: Success, Expanded: 1177, Path: 55, Runtime: 0.012994s
+  Adaptive A*: Success, Expanded: 1170, Path: 55, Runtime: 0.015079s
+
+Maze 34:
+  Forward A*: Success, Expanded: 744, Path: 43, Runtime: 0.008516s
+  Adaptive A*: Success, Expanded: 864, Path: 49, Runtime: 0.011001s
+
+Maze 35:
+  Forward A*: Success, Expanded: 35, Path: 7, Runtime: 0.000384s
+  Adaptive A*: Success, Expanded: 35, Path: 7, Runtime: 0.000431s
+
+Maze 36:
+  Forward A*: Success, Expanded: 8555, Path: 210, Runtime: 0.095571s
+  Adaptive A*: Success, Expanded: 7770, Path: 210, Runtime: 0.091206s
+
+Maze 37:
+  Forward A*: Success, Expanded: 7332, Path: 179, Runtime: 0.085033s
+  Adaptive A*: Success, Expanded: 6970, Path: 179, Runtime: 0.086345s
+
+Maze 38:
+  Forward A*: Failure, Expanded: 16135, Path: 157, Runtime: 0.140891s
+  Adaptive A*: Failure, Expanded: 15883, Path: 155, Runtime: 0.144035s
+
+Maze 39:
+  Forward A*: Success, Expanded: 9762, Path: 178, Runtime: 0.115962s
+  Adaptive A*: Success, Expanded: 8583, Path: 178, Runtime: 0.118065s
+
+Maze 40:
+  Forward A*: Success, Expanded: 6643, Path: 132, Runtime: 0.084659s
+  Adaptive A*: Success, Expanded: 6597, Path: 132, Runtime: 0.093782s
+
+Maze 41:
+  Forward A*: Success, Expanded: 9711, Path: 200, Runtime: 0.089639s
+  Adaptive A*: Success, Expanded: 8181, Path: 200, Runtime: 0.094815s
+
+Maze 42:
+  Forward A*: Success, Expanded: 2314, Path: 78, Runtime: 0.028393s
+  Adaptive A*: Success, Expanded: 2302, Path: 78, Runtime: 0.030134s
+
+Maze 43:
+  Forward A*: Success, Expanded: 54, Path: 9, Runtime: 0.000491s
+  Adaptive A*: Success, Expanded: 54, Path: 9, Runtime: 0.000517s
+
+Maze 44:
+  Forward A*: Success, Expanded: 10124, Path: 214, Runtime: 0.122275s
+  Adaptive A*: Success, Expanded: 15430, Path: 286, Runtime: 0.199398s
+
+Maze 45:
+  Forward A*: Success, Expanded: 2421, Path: 98, Runtime: 0.025004s
+  Adaptive A*: Success, Expanded: 2295, Path: 98, Runtime: 0.026881s
+
+Maze 46:
+  Forward A*: Success, Expanded: 14723, Path: 256, Runtime: 0.185169s
+  Adaptive A*: Success, Expanded: 13764, Path: 252, Runtime: 0.180388s
+
+Maze 47:
+  Forward A*: Success, Expanded: 17628, Path: 253, Runtime: 0.237820s
+  Adaptive A*: Success, Expanded: 17449, Path: 251, Runtime: 0.246327s
+
+Maze 48:
+  Forward A*: Success, Expanded: 7408, Path: 176, Runtime: 0.093034s
+  Adaptive A*: Success, Expanded: 7061, Path: 178, Runtime: 0.099590s
+
+Maze 49:
+  Forward A*: Success, Expanded: 8739, Path: 232, Runtime: 0.105909s
+  Adaptive A*: Success, Expanded: 8341, Path: 236, Runtime: 0.105681s
+
+Maze 50:
+  Forward A*: Success, Expanded: 7405, Path: 172, Runtime: 0.092912s
+  Adaptive A*: Success, Expanded: 7135, Path: 172, Runtime: 0.095281s
+

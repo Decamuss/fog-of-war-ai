@@ -1,7 +1,13 @@
 import numpy as np
+import sys
+import os
+
+# Add the project root to the path to import from grid_generation
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+from grid_generation.environment.priority_queue import PriorityQueue
 
 class RepeatedForwardAStar:
-    def __init__(self, grid, start, goal, favor_larger_g=False):
+    def __init__(self, grid, start, goal, favor_larger_g=True):
         self.grid = grid
         self.size = len(grid)
         self.start = start
@@ -23,39 +29,27 @@ class RepeatedForwardAStar:
         return abs(s[0] - self.goal[0]) + abs(s[1] - self.goal[1])
 
     def compute_path(self):
-        OPEN = {}
-        f_values = {}
+        # Use PriorityQueue with binary heap instead of dictionaries
+        open_queue = PriorityQueue(favor_larger_g=self.favor_larger_g)
         CLOSED = set()
+        
+        # Track which states are in the open queue
+        in_open = set()
 
         self.g[self.start] = 0
         f_value = self.g[self.start] + self.heuristic(self.start)
-        OPEN[self.start] = f_value
-        if f_value not in f_values:
-            f_values[f_value] = []
-        f_values[f_value].append(self.start)
+        open_queue.put(self.start, f_value, self.g[self.start])
+        in_open.add(self.start)
 
-        while OPEN:
-            min_f = min(f_values.keys())
-            states = f_values[min_f]
+        while not open_queue.empty():
+            # Get state with lowest f-value from the priority queue
+            s = open_queue.get()
             
-            s = None
-            if self.favor_larger_g:
-                max_g = -np.inf
-                for state in states:
-                    if self.g[state] > max_g:
-                        max_g = self.g[state]
-                        s = state
-            else:
-                min_g = np.inf
-                for state in states:
-                    if self.g[state] < min_g:
-                        min_g = self.g[state]
-                        s = state
-            
-            del OPEN[s]
-            f_values[min_f].remove(s)
-            if not f_values[min_f]:
-                del f_values[min_f]
+            # Skip if already processed (could happen due to duplicate entries in the heap)
+            if s not in in_open:
+                continue
+                
+            in_open.remove(s)
             
             CLOSED.add(s)
             self.expanded_cells += 1
@@ -84,16 +78,10 @@ class RepeatedForwardAStar:
                     
                     f_value = self.g[succ] + self.heuristic(succ)
                     
-                    if succ in OPEN:
-                        old_f = OPEN[succ]
-                        f_values[old_f].remove(succ)
-                        if not f_values[old_f]:
-                            del f_values[old_f]
-                    
-                    OPEN[succ] = f_value
-                    if f_value not in f_values:
-                        f_values[f_value] = []
-                    f_values[f_value].append(succ)
+                    # If already in open, it will be added again with new priority
+                    # The heap will handle this by using the new priority when extracted
+                    open_queue.put(succ, f_value, self.g[succ])
+                    in_open.add(succ)
         
         return False
 
@@ -126,16 +114,19 @@ class RepeatedForwardAStar:
                 state = self.tree[state]
             path.reverse()
             
-            for step in path:
-                if self.known_grid[step]:
-                    break
-                
-                self.start = step
-                self.total_path_length += 1
-                
-                if self.start == self.goal:
-                    return True, "I reached the target."
-                
-                self.observe_surroundings()
+            # Only move one step at a time
+            next_pos = path[0]
+            
+            # Check if next position is blocked
+            if self.known_grid[next_pos]:
+                continue  # Replan if blocked
+            
+            # Move to next position
+            self.start = next_pos
+            self.total_path_length += 1
+            
+            # Check if goal reached
+            if self.start == self.goal:
+                return True, "I reached the target."
         
         return True, "I reached the target." 

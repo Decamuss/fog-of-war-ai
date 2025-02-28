@@ -2,27 +2,262 @@ Tie-Breaking Comparison Results
 ==============================
 
 Average Results:
-Average expanded cells (smaller g): 36772.67
-Average expanded cells (larger g): 3062.33
-Improvement ratio: 12.01x
-Average path length (smaller g): 219.00
-Average path length (larger g): 219.00
-Average runtime (smaller g): 0.2519 seconds
-Average runtime (larger g): 0.0292 seconds
+Average expanded cells (smaller g): 25066.78
+Average expanded cells (larger g): 2592.24
+Improvement ratio: 9.67x
+Average path length (smaller g): 161.72
+Average path length (larger g): 160.80
+Average runtime (smaller g): 0.1816 seconds
+Average runtime (larger g): 0.0297 seconds
 
 Detailed Results:
 
 Maze 0:
-  Smaller g: 12940 cells, 0.0806 seconds, path length: 234
-  Larger g: 2652 cells, 0.0204 seconds, path length: 234
-  Improvement ratio: 4.88x
+  Smaller g: 12272 cells, 0.0971 seconds, path length: 226
+  Larger g: 2564 cells, 0.0315 seconds, path length: 236
+  Improvement ratio: 4.79x
 
 Maze 1:
-  Smaller g: 14792 cells, 0.0949 seconds, path length: 147
-  Larger g: 1635 cells, 0.0145 seconds, path length: 147
-  Improvement ratio: 9.05x
+  Smaller g: 19460 cells, 0.1371 seconds, path length: 173
+  Larger g: 1790 cells, 0.0212 seconds, path length: 171
+  Improvement ratio: 10.87x
 
 Maze 2:
-  Smaller g: 82586 cells, 0.5801 seconds, path length: 276
-  Larger g: 4900 cells, 0.0526 seconds, path length: 276
-  Improvement ratio: 16.85x
+  Smaller g: 83034 cells, 0.5883 seconds, path length: 192
+  Larger g: 3796 cells, 0.0508 seconds, path length: 192
+  Improvement ratio: 21.87x
+
+Maze 3:
+  Smaller g: 4360 cells, 0.0312 seconds, path length: 194
+  Larger g: 1101 cells, 0.0111 seconds, path length: 160
+  Improvement ratio: 3.96x
+
+Maze 4:
+  Smaller g: 20923 cells, 0.1431 seconds, path length: 194
+  Larger g: 2707 cells, 0.0289 seconds, path length: 266
+  Improvement ratio: 7.73x
+
+Maze 5:
+  Smaller g: 3212 cells, 0.0269 seconds, path length: 126
+  Larger g: 1062 cells, 0.0135 seconds, path length: 126
+  Improvement ratio: 3.02x
+
+Maze 6:
+  Smaller g: 12684 cells, 0.0893 seconds, path length: 138
+  Larger g: 897 cells, 0.0105 seconds, path length: 98
+  Improvement ratio: 14.14x
+
+Maze 7:
+  Smaller g: 3284 cells, 0.0250 seconds, path length: 89
+  Larger g: 702 cells, 0.0088 seconds, path length: 89
+  Improvement ratio: 4.68x
+
+Maze 8:
+  Smaller g: 190079 cells, 1.5004 seconds, path length: 380
+  Larger g: 9156 cells, 0.1283 seconds, path length: 384
+  Improvement ratio: 20.76x
+
+Maze 9:
+  Smaller g: 562 cells, 0.0181 seconds, path length: 36
+  Larger g: 160 cells, 0.0025 seconds, path length: 36
+  Improvement ratio: 3.51x
+
+Maze 10:
+  Smaller g: 24444 cells, 0.1845 seconds, path length: 221
+  Larger g: 2100 cells, 0.0270 seconds, path length: 185
+  Improvement ratio: 11.64x
+
+Maze 11:
+  Smaller g: 15112 cells, 0.1415 seconds, path length: 215
+  Larger g: 2989 cells, 0.0432 seconds, path length: 211
+  Improvement ratio: 5.06x
+
+Maze 12:
+  Smaller g: 14049 cells, 0.1005 seconds, path length: 129
+  Larger g: 1045 cells, 0.0125 seconds, path length: 107
+  Improvement ratio: 13.44x
+
+Maze 13:
+  Smaller g: 564 cells, 0.0053 seconds, path length: 60
+  Larger g: 276 cells, 0.0028 seconds, path length: 60
+  Improvement ratio: 2.04x
+
+Maze 14:
+  Smaller g: 7947 cells, 0.0585 seconds, path length: 103
+  Larger g: 902 cells, 0.0103 seconds, path length: 109
+  Improvement ratio: 8.81x
+
+Maze 15:
+  Smaller g: 58220 cells, 0.3992 seconds, path length: 187
+  Larger g: 4916 cells, 0.0619 seconds, path length: 253
+  Improvement ratio: 11.84x
+
+Maze 16:
+  Smaller g: 1570 cells, 0.0113 seconds, path length: 70
+  Larger g: 346 cells, 0.0034 seconds, path length: 56
+  Improvement ratio: 4.54x
+
+Maze 17:
+  Smaller g: 4526 cells, 0.0344 seconds, path length: 114
+  Larger g: 1188 cells, 0.0144 seconds, path length: 114
+  Improvement ratio: 3.81x
+
+Maze 18:
+  Smaller g: 908 cells, 0.0074 seconds, path length: 52
+  Larger g: 288 cells, 0.0038 seconds, path length: 52
+  Improvement ratio: 3.15x
+
+Maze 19:
+  Smaller g: 55790 cells, 0.4418 seconds, path length: 305
+  Larger g: 6369 cells, 0.0850 seconds, path length: 301
+  Improvement ratio: 8.76x
+
+Maze 20:
+  Smaller g: 79217 cells, 0.5855 seconds, path length: 249
+  Larger g: 4635 cells, 0.0582 seconds, path length: 249
+  Improvement ratio: 17.09x
+
+Maze 21:
+  Smaller g: 62158 cells, 0.4298 seconds, path length: 227
+  Larger g: 4045 cells, 0.0513 seconds, path length: 239
+  Improvement ratio: 15.37x
+
+Maze 22:
+  Smaller g: 11756 cells, 0.0859 seconds, path length: 270
+  Larger g: 3411 cells, 0.0390 seconds, path length: 270
+  Improvement ratio: 3.45x
+
+Maze 23:
+  Smaller g: 6514 cells, 0.0454 seconds, path length: 293
+  Larger g: 1017 cells, 0.0103 seconds, path length: 133
+  Improvement ratio: 6.41x
+
+Maze 24:
+  Smaller g: 52560 cells, 0.3767 seconds, path length: 206
+  Larger g: 3270 cells, 0.0420 seconds, path length: 210
+  Improvement ratio: 16.07x
+
+Maze 25:
+  Smaller g: 242 cells, 0.0018 seconds, path length: 30
+  Larger g: 128 cells, 0.0013 seconds, path length: 30
+  Improvement ratio: 1.89x
+
+Maze 26:
+  Smaller g: 23527 cells, 0.1602 seconds, path length: 204
+  Larger g: 2420 cells, 0.0269 seconds, path length: 190
+  Improvement ratio: 9.72x
+
+Maze 27:
+  Smaller g: 14296 cells, 0.0951 seconds, path length: 97
+  Larger g: 1175 cells, 0.0136 seconds, path length: 97
+  Improvement ratio: 12.17x
+
+Maze 28:
+  Smaller g: 91932 cells, 0.6233 seconds, path length: 250
+  Larger g: 4441 cells, 0.0566 seconds, path length: 284
+  Improvement ratio: 20.70x
+
+Maze 29:
+  Smaller g: 20086 cells, 0.1458 seconds, path length: 127
+  Larger g: 11345 cells, 0.0800 seconds, path length: 127
+  Improvement ratio: 1.77x
+
+Maze 30:
+  Smaller g: 4683 cells, 0.0318 seconds, path length: 107
+  Larger g: 905 cells, 0.0091 seconds, path length: 107
+  Improvement ratio: 5.17x
+
+Maze 31:
+  Smaller g: 53866 cells, 0.3830 seconds, path length: 241
+  Larger g: 3778 cells, 0.0476 seconds, path length: 249
+  Improvement ratio: 14.26x
+
+Maze 32:
+  Smaller g: 2213 cells, 0.0148 seconds, path length: 55
+  Larger g: 354 cells, 0.0037 seconds, path length: 55
+  Improvement ratio: 6.25x
+
+Maze 33:
+  Smaller g: 1156 cells, 0.0088 seconds, path length: 49
+  Larger g: 166 cells, 0.0017 seconds, path length: 43
+  Improvement ratio: 6.96x
+
+Maze 34:
+  Smaller g: 8 cells, 0.0005 seconds, path length: 7
+  Larger g: 8 cells, 0.0001 seconds, path length: 7
+  Improvement ratio: 1.00x
+
+Maze 35:
+  Smaller g: 21237 cells, 0.1419 seconds, path length: 210
+  Larger g: 2179 cells, 0.0245 seconds, path length: 210
+  Improvement ratio: 9.75x
+
+Maze 36:
+  Smaller g: 10105 cells, 0.0722 seconds, path length: 179
+  Larger g: 2453 cells, 0.0282 seconds, path length: 179
+  Improvement ratio: 4.12x
+
+Maze 37:
+  Smaller g: 17871 cells, 0.1249 seconds, path length: 155
+  Larger g: 11976 cells, 0.0897 seconds, path length: 157
+  Improvement ratio: 1.49x
+
+Maze 38:
+  Smaller g: 14518 cells, 0.0979 seconds, path length: 104
+  Larger g: 3447 cells, 0.0411 seconds, path length: 178
+  Improvement ratio: 4.21x
+
+Maze 39:
+  Smaller g: 28200 cells, 0.1911 seconds, path length: 132
+  Larger g: 1825 cells, 0.0228 seconds, path length: 132
+  Improvement ratio: 15.45x
+
+Maze 40:
+  Smaller g: 15090 cells, 0.1028 seconds, path length: 200
+  Larger g: 2046 cells, 0.0214 seconds, path length: 200
+  Improvement ratio: 7.38x
+
+Maze 41:
+  Smaller g: 2360 cells, 0.0188 seconds, path length: 78
+  Larger g: 680 cells, 0.0085 seconds, path length: 78
+  Improvement ratio: 3.47x
+
+Maze 42:
+  Smaller g: 43 cells, 0.0003 seconds, path length: 9
+  Larger g: 17 cells, 0.0002 seconds, path length: 9
+  Improvement ratio: 2.53x
+
+Maze 43:
+  Smaller g: 14202 cells, 0.1052 seconds, path length: 216
+  Larger g: 3458 cells, 0.0400 seconds, path length: 214
+  Improvement ratio: 4.11x
+
+Maze 44:
+  Smaller g: 1628 cells, 0.0114 seconds, path length: 98
+  Larger g: 404 cells, 0.0036 seconds, path length: 98
+  Improvement ratio: 4.03x
+
+Maze 45:
+  Smaller g: 46722 cells, 0.3192 seconds, path length: 252
+  Larger g: 3728 cells, 0.0457 seconds, path length: 256
+  Improvement ratio: 12.53x
+
+Maze 46:
+  Smaller g: 72470 cells, 0.5081 seconds, path length: 251
+  Larger g: 5452 cells, 0.0734 seconds, path length: 253
+  Improvement ratio: 13.29x
+
+Maze 47:
+  Smaller g: 14470 cells, 0.0994 seconds, path length: 178
+  Larger g: 2158 cells, 0.0248 seconds, path length: 176
+  Improvement ratio: 6.71x
+
+Maze 48:
+  Smaller g: 18137 cells, 0.1244 seconds, path length: 236
+  Larger g: 2279 cells, 0.0247 seconds, path length: 232
+  Improvement ratio: 7.96x
+
+Maze 49:
+  Smaller g: 19072 cells, 0.1341 seconds, path length: 172
+  Larger g: 2058 cells, 0.0230 seconds, path length: 172
+  Improvement ratio: 9.27x
