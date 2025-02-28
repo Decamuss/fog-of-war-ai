@@ -20,7 +20,6 @@ class RepeatedBackwardAStar:
         self.search_count = 0
 
     def heuristic(self, s):
-        # In backward search, the heuristic estimates distance from s to the start (agent position)
         return abs(s[0] - self.start[0]) + abs(s[1] - self.start[1])
 
     def compute_path(self):
@@ -28,7 +27,6 @@ class RepeatedBackwardAStar:
         f_values = {}
         CLOSED = set()
 
-        # Start search from the goal (target position)
         self.g[self.goal] = 0
         f_value = self.g[self.goal] + self.heuristic(self.goal)
         OPEN[self.goal] = f_value
@@ -62,7 +60,6 @@ class RepeatedBackwardAStar:
             CLOSED.add(s)
             self.expanded_cells += 1
             
-            # In backward search, we terminate when we reach the start (agent position)
             if s == self.start:
                 return True
             

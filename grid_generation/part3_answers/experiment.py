@@ -74,7 +74,6 @@ def compare_forward_backward(num_mazes=50):
         result_backward = run_backward_experiment(i)
         results_backward.append(result_backward)
     
-    # Extract metrics for comparison
     expanded_forward = [r["expanded_cells"] for r in results_forward]
     expanded_backward = [r["expanded_cells"] for r in results_backward]
     
@@ -84,7 +83,6 @@ def compare_forward_backward(num_mazes=50):
     path_forward = [r["total_path_length"] for r in results_forward]
     path_backward = [r["total_path_length"] for r in results_backward]
     
-    # Calculate averages
     avg_expanded_forward = np.mean(expanded_forward)
     avg_expanded_backward = np.mean(expanded_backward)
     
@@ -94,7 +92,6 @@ def compare_forward_backward(num_mazes=50):
     avg_runtime_forward = np.mean(runtime_forward)
     avg_runtime_backward = np.mean(runtime_backward)
     
-    # Print summary
     print("\nResults:")
     print(f"Average expanded cells (Forward): {avg_expanded_forward:.2f}")
     print(f"Average expanded cells (Backward): {avg_expanded_backward:.2f}")
@@ -120,13 +117,11 @@ def compare_forward_backward(num_mazes=50):
     
     plt.tight_layout()
     
-    # Save results
     output_dir = Path("grid_generation/part3_answers")
     output_dir.mkdir(parents=True, exist_ok=True)
     plt.savefig(output_dir / "forward_backward_comparison.png")
     plt.close()
     
-    # Create a scatter plot to compare expanded cells for each maze
     plt.figure(figsize=(10, 6))
     plt.scatter(expanded_forward, expanded_backward, alpha=0.7)
     plt.plot([0, max(expanded_forward + expanded_backward)], [0, max(expanded_forward + expanded_backward)], 'r--')
@@ -136,7 +131,6 @@ def compare_forward_backward(num_mazes=50):
     plt.savefig(output_dir / "expanded_cells_scatter.png")
     plt.close()
     
-    # Save detailed results to a text file
     with open(output_dir / "forward_backward_results.txt", "w") as f:
         f.write("Forward vs Backward A* Comparison Results\n")
         f.write("======================================\n\n")
