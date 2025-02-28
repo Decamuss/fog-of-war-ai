@@ -1,0 +1,87 @@
+Part 3 - Forward vs. Backward A* Analysis
+
+Implementation:
+We implemented both Repeated Forward A* and Repeated Backward A* algorithms for the Fast Trajectory Replanning problem. Both implementations break ties among cells with the same f-value in favor of cells with larger g-values, as required by the prompt.
+
+Key implementation differences:
+1. Direction of Search:
+   - Repeated Forward A* searches from the agent's current position to the target.
+   - Repeated Backward A* searches from the target to the agent's current position.
+
+2. Heuristic Function:
+   - In Forward A*, the heuristic estimates the distance from a cell to the target: h(s) = |s_x - goal_x| + |s_y - goal_y|
+   - In Backward A*, the heuristic estimates the distance from a cell to the agent's current position: h(s) = |s_x - agent_x| + |s_y - agent_y|
+
+3. Path Reconstruction:
+   - In Forward A*, we follow tree pointers from the target back to the agent.
+   - In Backward A*, we follow tree pointers from the agent to the target.
+
+Experimental Results:
+Our experiments on 20 randomly generated mazes of size 101×101 with approximately 30% blocked cells showed significant performance differences between the two algorithms:
+
+1. Expanded Cells:
+   - Forward A*: Average of 2,121.40 cells expanded
+   - Backward A*: Average of 11,544.95 cells expanded
+   - Ratio (Forward/Backward): 0.18x
+
+   This means that Forward A* expanded only about 18% as many cells as Backward A*, making it substantially more efficient in terms of search space exploration.
+
+2. Path Length:
+   - Forward A*: Average path length of 164.60
+   - Backward A*: Average path length of 155.30
+
+   Interestingly, Backward A* found slightly shorter paths on average. This suggests that while Forward A* is more computationally efficient, Backward A* might occasionally find more direct routes in some maze configurations.
+
+3. Runtime:
+   - Forward A*: Average runtime of 0.0259 seconds
+   - Backward A*: Average runtime of 0.1366 seconds
+   - Ratio: Forward A* was approximately 5.3x faster
+
+   As expected, the runtime correlates with the number of expanded cells, with Forward A* being significantly faster.
+
+Detailed Analysis:
+Looking at the individual maze results, we observe:
+
+1. Consistency of Performance Advantage:
+   - Forward A* consistently expanded fewer cells than Backward A* across all 20 mazes.
+   - The ratio of cells expanded (Forward/Backward) ranged from 0.09x (Maze 15) to 0.85x (Maze 11).
+   - Even in the worst case for Forward A*, it still expanded 15% fewer cells than Backward A*.
+
+2. Correlation with Maze Complexity:
+   - The advantage of Forward A* appears more pronounced in more complex mazes.
+   - In mazes where both algorithms expanded many cells (e.g., Maze 15 with 5,304 vs. 58,208 cells), the ratio tends to be smaller (0.09x), indicating a greater advantage for Forward A*.
+   - In simpler mazes with fewer expanded cells (e.g., Maze 9 with 257 vs. 320 cells), the ratio is closer to 1 (0.80x).
+
+3. Path Length Variations:
+   - While the average path length was slightly shorter for Backward A*, this wasn't consistent across all mazes.
+   - In some mazes (e.g., Maze 0), Forward A* found significantly shorter paths.
+   - In others (e.g., Maze 3), Backward A* found significantly shorter paths.
+
+Explanation of Observations:
+The dramatic difference in performance can be explained by several factors:
+
+1. Fog of War Effect:
+   In the fog of war scenario, the agent only knows about obstacles it has observed. When starting the search from the agent's position (Forward A*), the algorithm has more accurate information about the immediate surroundings of the agent. This allows it to make better-informed decisions early in the search process.
+
+   In contrast, when starting from the target (Backward A*), the algorithm initially has no information about obstacles near the target (unless the agent has previously observed that area). This leads to more wasted exploration as the search progresses and discovers obstacles that invalidate previously considered paths.
+
+2. Information Gain During Search:
+   As Forward A* progresses, it builds paths from known territory (around the agent) into unknown territory. This is more efficient because:
+   - Early decisions are made with more complete information
+   - The search naturally focuses on promising directions based on what's known
+   - When obstacles are discovered, only a portion of the search space needs to be reconsidered
+
+   Backward A* does the opposite, starting from unknown territory and working toward known territory, which is inherently less efficient in a fog of war scenario.
+
+3. Heuristic Effectiveness:
+   The Manhattan distance heuristic may be more effective when guiding the search from the agent to the target than vice versa. This could be because the agent's knowledge of the environment is centered around its current position, making estimates from that position more accurate.
+
+4. Path Quality Trade-off:
+   The slight advantage in path length for Backward A* suggests a trade-off: by exploring more of the state space, Backward A* occasionally finds more direct routes that Forward A* might miss due to its more focused exploration. However, this marginal improvement in path quality comes at a substantial computational cost.
+
+Conclusion:
+For the repeated A* search in a fog of war scenario, Forward A* significantly outperforms Backward A* in terms of computational efficiency (expanded cells and runtime), while Backward A* may occasionally find slightly shorter paths. The computational advantage of Forward A* (5.3x faster, 82% fewer cells expanded) far outweighs the minor path length advantage of Backward A* (about 5.6% shorter on average).
+
+This suggests that in applications where agents must navigate partially observable environments, searching from the agent's position toward the goal is the preferred approach, especially when computational resources are limited or when real-time performance is important.
+
+This result makes intuitive sense: when navigating in an unfamiliar environment, it's more efficient to plan a path starting from where you have the most information (your current surroundings) rather than trying to work backward from a destination about which you have limited knowledge. 

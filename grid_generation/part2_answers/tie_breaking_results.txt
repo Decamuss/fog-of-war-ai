@@ -1,0 +1,28 @@
+Tie-Breaking Comparison Results
+==============================
+
+Average Results:
+Average expanded cells (smaller g): 36772.67
+Average expanded cells (larger g): 3062.33
+Improvement ratio: 12.01x
+Average path length (smaller g): 219.00
+Average path length (larger g): 219.00
+Average runtime (smaller g): 0.2519 seconds
+Average runtime (larger g): 0.0292 seconds
+
+Detailed Results:
+
+Maze 0:
+  Smaller g: 12940 cells, 0.0806 seconds, path length: 234
+  Larger g: 2652 cells, 0.0204 seconds, path length: 234
+  Improvement ratio: 4.88x
+
+Maze 1:
+  Smaller g: 14792 cells, 0.0949 seconds, path length: 147
+  Larger g: 1635 cells, 0.0145 seconds, path length: 147
+  Improvement ratio: 9.05x
+
+Maze 2:
+  Smaller g: 82586 cells, 0.5801 seconds, path length: 276
+  Larger g: 4900 cells, 0.0526 seconds, path length: 276
+  Improvement ratio: 16.85x
